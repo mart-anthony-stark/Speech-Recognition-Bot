@@ -42,7 +42,7 @@ body{
   transform: translateY(-2px);
 }
 .text{
-  position: relative;
+  position: absolute;
   top: 20px;
   color: var(--font);
 }

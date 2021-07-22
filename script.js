@@ -14,7 +14,10 @@ recognition.onstart= () => {
 recognition.onresult = (e) =>{
   const text = e.results[0][0].transcript
   console.log(text)
-  textView.innerText = text
+  textView.innerText = '' + text
+
+  if(text.includes('hello'))
+    console.log('Good day sir')
 }
 
 recognition.onaudioend = () => {
