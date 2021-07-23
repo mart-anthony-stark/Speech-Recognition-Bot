@@ -4,6 +4,8 @@ const btnFace = document.querySelector('#btn span')
 const textView = document.querySelector('h3.text')
 const recognition = new SpeechRecognition()
 
+const artyom = new Artyom()
+
 recognition.lang = 'en-US'
 
 recognition.onstart= () => {
@@ -19,8 +21,8 @@ recognition.onresult = (e) =>{
   textView.innerText = '' + text
   
   if(text.includes('hello')){
-    // let utterance = new SpeechSynthesisUtterance("Good day. Sir!");
-    // speechSynthesis.speak(utterance);
+    let utterance = new SpeechSynthesisUtterance("Good day sir");
+    speechSynthesis.speak(utterance);
   }
 }
 
